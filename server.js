@@ -1,0 +1,23 @@
+const express = require('express')
+const nunjucks = require('nunjucks')
+const routes = require('./routers')
+const server = express()
+
+server.use(express.static('./public/'))
+server.use(routes)
+
+server.set("view engine", "njk")
+
+nunjucks.configure("views", {
+    express: server,
+    autoescape: false,
+    noCache: true,
+})
+
+server.get("/", function(req, res) {
+
+})  
+
+server.listen(8080, function() {
+    console.log("Hacking the Planet!")
+})
