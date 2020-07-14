@@ -4,6 +4,8 @@
 
 Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de cadastro tanto de usuários como de instrutores.
 
+![](public/showproject.gif)
+
  ## Tecnologias e ferramentas:
 
  <ul>
@@ -31,6 +33,8 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Separando as rotas;
 - Criando rotas de Instrutores;
 - Configuração CSS do 'menu' com animação;
+- CSS card com animações;
+- Estruturar e estilizar dados do instrutor;
 
 
 

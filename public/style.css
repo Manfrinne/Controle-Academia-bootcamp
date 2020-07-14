@@ -3,6 +3,7 @@
 
 :root {
     --rocket-color: #7159c1;
+    --yellow-color: #f7df1e;
 }
 
 * {
@@ -93,6 +94,54 @@ header {
     }
 }
 
+/* DETAILS */
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.8px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--rocket-color);
+}
+
+.details .item span {
+    background-color: var(--yellow-color);
+    padding: 8px 16px;
+    border-radius: 16px;
+    color: #777;
+    margin-top: 8px;
+    margin-right: 4px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
 
 
 
