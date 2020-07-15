@@ -13,11 +13,7 @@ nunjucks.configure("views", {
     autoescape: false,
     noCache: true,
 })
-
-server.get("/", function(req, res) {
-
-})  
-
+ 
 server.listen(8080, function() {
     console.log("Hacking the Planet!")
 })
