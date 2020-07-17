@@ -3,6 +3,8 @@ const nunjucks = require('nunjucks')
 const routes = require('./routers')
 const server = express()
 
+// .use é um 'MIDDLEWARE'
+server.use(express.urlencoded({ extended: true }))
 server.use(express.static('./public/'))
 server.use(routes)
 

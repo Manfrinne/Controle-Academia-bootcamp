@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const instructors = require('./instructors')
 
 routes.get('/', function(req, res) {
     return res.redirect("/instructors")
@@ -13,9 +14,9 @@ routes.get('/instructors/create', function(req, res) {
     return res.render("instructors/create")
 }) 
 
-routes.post('/instructors', function(req, res) {
-    return res.send("TESTING POST")
-}) 
+// req.query => para enviar no modo .get
+// req.body => para enviar no modo .post
+routes.post('/instructors', instructors.post)
 
 routes.get('/members', function(req, res) {
     return res.send("members")

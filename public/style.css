@@ -143,7 +143,7 @@ header {
     font-size: 12px;
 }
 
-/* FORM  */
+/* FORM - create page  */
 
 input {
     width: 100%;
@@ -163,6 +163,11 @@ input::placeholder {
     font-weight: normal;
 }
 
+input[type="date"] {
+    font-size: 14px;
+    font-weight: normal;
+}
+
 button[type="submit"] {
     padding: 8px 32px;
     font-size: 16px;
@@ -173,10 +178,7 @@ button[type="submit"] {
     border-radius: 4px;
 }
 
-input[type="date"] {
-    font-size: 16px;
-    font-weight: normal;
-}
+
 
 
 
