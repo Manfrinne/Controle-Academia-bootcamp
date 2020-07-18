@@ -48,7 +48,7 @@ header {
     color: var(--rocket-color);
 }
 
-/* Animação underline do menu */
+/* Animação underline do menu - parte 1*/
 .links a::after {
     content: "";
     width: 0;
@@ -59,7 +59,7 @@ header {
     bottom: -4px;
 }
 
-/* Animação underline do menu */
+/* Animação underline do menu - parte 2*/
 .links a:hover::after {
     width: 100%;
     transition: width 200ms ease-in-out;

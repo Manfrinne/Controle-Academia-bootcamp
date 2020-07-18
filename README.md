@@ -33,10 +33,9 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Separando as rotas;
 - Criando rotas de Instrutores;
 - Configuração CSS do 'menu' com animação;
-- CSS card com animações;
+- Configuração CSS do 'card' com animações;
 - Estruturar e estilizar dados do instrutor;
-
-
+- Estruturando dados de instrutores;
 
 ## Como contribuir:
 
