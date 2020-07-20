@@ -35,13 +35,24 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Configuração CSS do 'menu' com animação;
 - Configuração CSS do 'card' com animações;
 - Estruturar e estilizar dados do instrutor;
+
 - Estruturando dados de instrutores;
+- Estruturando a visualização de um instrutor;
+- Conhecendo o Spread Operator do Javascript;
+- Ajustando sexo e serviços do instrutor;
+- Criando lógica para calcular idade;
+
+
 
 ## Como contribuir:
 
 -  Faça um fork do projeto;
 -  Crie uma nova branch, exemplo: `git checkout -b my-feature`;
 -  Commit as modificações, exemplo: `git commit -m 'feat: My new feature'`;
--  Faça um push para a sua branch: `git push origin my-feature`.
+-  Faça um push para a sua branch: `git push origin my-feature`;
+
+-  Buscando instrutor com parâmetros da rota;
+
+
 
 Criado por Manfrinne Ferreira [Contato](https://www.linkedin.com/in/manfrinne-ferreira-6033121a7/)
