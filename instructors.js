@@ -1,5 +1,6 @@
 const fs = require('fs')
 const data = require('./data.json')
+const {age} = require('./utils') // {age} as chaves é para desestruturação do objeto
 
 // function show data.json
 exports.show = function(req, res) {
@@ -15,7 +16,7 @@ exports.show = function(req, res) {
 
     const instructor = {
         ...foundInstructor, // spread operator
-        age: "",
+        age: age(foundInstructor.birth),
         services: foundInstructor.services.split(","),
         created_at: "",
     }
@@ -63,19 +64,4 @@ exports.post = function(req, res) {
     })
 
     // return res.send(req.body)
-}
-
-// Date function for age
-function age(timestamp) {
-    const today = new Date()
-    const birthDate = new Date(timestamp)
-
-    let age = today.getFullYear() - birthDate.getFullYear()
-    const month = today.getMonth() - birthDate.getMonth()
-
-    if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
-        age = age - 1
-    }
-
-    return age
 }
