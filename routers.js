@@ -3,25 +3,29 @@ const routes = express.Router()
 const instructors = require('./instructors')
 
 routes.get('/', function(req, res) {
-    return res.redirect("/instructors")
+  return res.redirect("/instructors")
 })
 
 routes.get('/instructors', function(req, res) {
-    return res.render("instructors/index")
+  return res.render("instructors/index")
 })
 
 routes.get('/instructors/create', function(req, res) {
-    return res.render("instructors/create")
+  return res.render("instructors/create")
 })
 
 routes.get('/instructors/:id', instructors.show)
+
+routes.get('/instructors/:id/edit', function(req, res) {
+  return res.render("instructors/edit")
+})
 
 // req.query => para enviar no modo .get
 // req.body => para enviar no modo .post
 routes.post('/instructors', instructors.post)
 
 routes.get('/members', function(req, res) {
-    return res.send("members")
+  return res.send("members")
 })
 
 module.exports = routes
