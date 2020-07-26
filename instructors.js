@@ -1,29 +1,29 @@
 const fs = require('fs')
 const data = require('./data.json')
 
-// function show data
+// function show data.json
 exports.show = function(req, res) {
+
+    // routes.get('/instructors/:id', instructors.show)
     const {id} = req.params
 
     const foundInstructor = data.instructors.find(function(instructor) {
         return instructor.id == id
-    }) 
+    })
 
     if (!foundInstructor) return res.send("Instructor not found!")
 
     const instructor = {
-        ...foundInstructor,
+        ...foundInstructor, // spread operator
         age: "",
         services: foundInstructor.services.split(","),
         created_at: "",
     }
 
-    console.log(instructor.gender)
-
     return res.render("instructors/show", {instructor})
 }
 
-// create
+// create input "create page"
 exports.post = function(req, res) {
 
     // Validação dos dados
@@ -31,7 +31,7 @@ exports.post = function(req, res) {
     for (key of keys) {
         // req.body.key == ""
         // key ==> todos dados introduzidos no input
-        if (req.body[key] == "") {
+        if (req.body[key] == "") { // gerando array para separar objetos
             return res.send('Please, fill in all fields.')
         }
     }
@@ -55,10 +55,27 @@ exports.post = function(req, res) {
     })
 
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+
         if (err) {return res.send("Write file error!")}
+        // Esse condicional é só para a aplicação não cair caso, por algum motivo, o file 'data.json' não puder ser criado
 
         return res.redirect("/instructors")
     })
 
     // return res.send(req.body)
+}
+
+// Date function for age
+function age(timestamp) {
+    const today = new Date()
+    const birthDate = new Date(timestamp)
+
+    let age = today.getFullYear() - birthDate.getFullYear()
+    const month = today.getMonth() - birthDate.getMonth()
+
+    if (month < 0 || month == 0 && today.getDate() < birthDate.getDate()) {
+        age = age - 1
+    }
+
+    return age
 }

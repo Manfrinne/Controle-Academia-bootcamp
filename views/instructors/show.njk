@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="card">
-    <section class="avatar" style="background: url( {{ instructor.avatar_url }} )
-    no-repeat center center / cover">
+    <section class="avatar" style="background: url({{ instructor.avatar_url }}) no-repeat center center / cover">
+
     </section>
     <section class="details">
 
@@ -21,6 +21,7 @@
 
         <div class="item">
             <div>Sexo</div>
+            {# Posso trabalhar com condicionais no Nunjuks #}
             <div>{{ "Feminino" if instructor.gender == "F" else "Maculino" }}</div>
         </div>
 

@@ -26,6 +26,15 @@
       "gender": "F",
       "services": "Crossfit, Academia, Natação",
       "created_at": 1595118823273
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1595349393900-d34580c180af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "name": "Geovane Carvalho Sousa",
+      "birth": 476236800000,
+      "gender": "M",
+      "services": "Crossfit, Academia, Natação",
+      "created_at": 1595723097330
     }
   ]
 }

@@ -17,7 +17,7 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
   <li>Express</li>
   <li>Nunjucks</li>
  </ul>
- 
+
 ## Rodando o projeto:
 
 1 - Clone o projeto e o abra utilizando seu editor preferido.
