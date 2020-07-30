@@ -43,6 +43,7 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Criando lógica para calcular idade;
 - Configurar função de Data e corrigir bugs de input;
 - Configurar função para modificar e atualizar dados do instrutor;
+- Instalar dependências de desenvolvimento 'browsersync' e 'npm-run-all';
 
 
 ## Como contribuir:
