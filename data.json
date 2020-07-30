@@ -1,24 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "avatar_url": "https://www.google.com",
-      "name": "Arthur Ibraymovit",
-      "birth": 476236800000,
-      "gender": "M",
-      "services": "Musculação, Crossfit",
-      "created_at": 1595118792427
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://www.ghfghfg22222",
-      "name": "Manfrinne Ferreira de Sousa",
-      "birth": 476236800000,
-      "gender": "M",
-      "services": "Crossfit, Academia, Crossfit, Academia",
-      "created_at": 1595118823273
-    },
-    {
       "id": 3,
       "avatar_url": "https://www.ghfghfg22222",
       "name": "Pollyanne Cardoso",

@@ -98,8 +98,6 @@ exports.edit = function(req, res) {
 exports.put = function(req, res){
   const {id} = req.body
 
-  console.log(req.body)
-
   // variável para isolar um objeto específico do meu "data.json"
   const foundInstructor = data.instructors.find(function(instructor, foundIndex) {
     if (id == instructor.id) {
@@ -124,4 +122,22 @@ exports.put = function(req, res){
     return res.redirect(`/instructors/${id}`)
   })
 
+}
+
+// função para deletar dados de um instrutor
+exports.delete = function(req, res) {
+  const {id} = req.body
+
+  // Tudo que retornar TRUE será colocado dentro do array 'filteredInstructors'.
+  const filteredInstructors = data.instructors.filter(function(instructor){
+    return instructor.id != id // 'id' não pode ser deletado agora
+  })
+
+  data.instructors = filteredInstructors
+
+  fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
+    if(err) return res.send("Delete error!")
+
+    return res.redirect(`/instructors`)
+    })
 }

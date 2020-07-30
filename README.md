@@ -44,6 +44,7 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Configurar função de Data e corrigir bugs de input;
 - Configurar função para modificar e atualizar dados do instrutor;
 - Instalar dependências de desenvolvimento 'browsersync' e 'npm-run-all';
+- Configurar função e botão para deletar dados de um instrutor;
 
 
 ## Como contribuir:
