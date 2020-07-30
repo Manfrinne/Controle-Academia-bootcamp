@@ -41,7 +41,8 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Conhecendo o Spread Operator do Javascript;
 - Ajustando sexo e serviços do instrutor;
 - Criando lógica para calcular idade;
-
+- Configurar função de Data e corrigir bugs de input;
+- Configurar função para modificar e atualizar dados do instrutor;
 
 
 ## Como contribuir:

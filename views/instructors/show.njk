@@ -29,7 +29,7 @@
             <div>Acompanhamento</div>
             <div>
                 {% for service in instructor.services %}
-                <span> {{ service }} </span>
+                  <span> {{ service }} </span>
                 {% endfor %}
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div>{{ instructor.created_at }}</div>
         </div>
 
-        <a href="#" class="button">Editar</a>
+        <a href="/instructors/{{ instructor.id }}/edit" class="button">Editar</a>
 
     </section>
 </div>
