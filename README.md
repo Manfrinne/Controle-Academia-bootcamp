@@ -47,6 +47,8 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 - Configurar função e botão para deletar dados de um instrutor;
 - Listando instrutores com tabela no HTML;
 
+- Estruturando dados de membros;
+
 
 ## Como contribuir:
 

@@ -1,6 +1,6 @@
 const fs = require('fs')
-const data = require('./data.json')
-const {age, date} = require('./utils')
+const data = require('../data.json')
+const {age, date} = require('../utils')
 // {age} com as chaves é para
 // desestruturação do objeto
 
@@ -31,6 +31,10 @@ exports.show = function(req, res) {
   return res.render("instructors/show", {instructor})
 }
 
+exports.create = function(req, res) {
+  return res.render("instructors/create")
+}
+
 // função para enviar dados do input para o arquivo data.json
 exports.post = function(req, res) {
 
@@ -55,7 +59,7 @@ exports.post = function(req, res) {
   // criar uma variável para identificar um objeto isoladamente
   const id = Number(data.instructors.length + 1)
 
-  // o método ".push" não deixa um novo objeto subscrever o objeto existente
+  // o método ".push" não deixa um novo objeto subscrever os objeto existente
   data.instructors.push({
       id,
       avatar_url,
@@ -72,7 +76,7 @@ exports.post = function(req, res) {
       // motivo, o arquivo 'data.json' não puder ser criado
       if (err) {return res.send("Write file error!")}
 
-      return res.redirect("/instructors")
+      return res.redirect(`instructors/${id}`)
   })
 
   // return res.send(req.body)
@@ -124,7 +128,7 @@ exports.put = function(req, res){
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send("Edit error!")
 
-    return res.redirect(`/instructors/${id}`)
+    return res.redirect(`instructors/${id}`)
   })
 
 }
@@ -143,6 +147,6 @@ exports.delete = function(req, res) {
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
     if(err) return res.send("Delete error!")
 
-    return res.redirect(`/instructors`)
+    return res.redirect(`instructors`)
     })
 }
