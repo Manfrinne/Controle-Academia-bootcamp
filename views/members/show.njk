@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="card">
-    <section class="avatar" style="background: url({{ instructor.avatar_url }}) no-repeat center center / cover">
+    <section class="avatar" style="background: url({{ member.avatar_url }}) no-repeat center center / cover">
 
     </section>
     <section class="details">
@@ -10,36 +10,42 @@
         <h3>Detalhes</h3>
 
         <div class="item">
-            <div>Instrutor</div>
-            <div>{{ instructor.name }}</div>
+            <div>Member</div>
+            <div>{{ member.name }}</div>
         </div>
 
         <div class="item">
-            <div>Idade</div>
-            <div>{{ instructor.age }}</div>
+            <div>Email</div>
+            <div>{{ member.email }}</div>
+        </div>
+
+        <div class="item">
+            <div>Aniversário</div>
+            <div>{{ member.birth }}</div>
         </div>
 
         <div class="item">
             <div>Sexo</div>
             {# Posso trabalhar com condicionais no Nunjuks #}
-            <div>{{ "Feminino" if instructor.gender == "F" else "Maculino" }}</div>
+            <div>{{ "Feminino" if member.gender == "F" else "Masculino" }}</div>
         </div>
 
         <div class="item">
-            <div>Acompanhamento</div>
-            <div>
-                {% for service in instructor.services %}
-                  <span> {{ service }} </span>
-                {% endfor %}
-            </div>
+            <div>Tipo Sanguíneo</div>
+            <div>{{ member.blood }}</div>
         </div>
 
-        <div class="item">
-            <div>Catastrado</div>
-            <div>{{ instructor.created_at }}</div>
+         <div class="item">
+            <div>Peso (kg)</div>
+            <div>{{ member.weight }}</div>
         </div>
 
-        <a href="/instructors/{{ instructor.id }}/edit" class="button">Editar</a>
+         <div class="item">
+            <div>Altura (cm)</div>
+            <div>{{ member.height }}</div>
+        </div>
+
+        <a href="/members/{{ member.id }}/edit" class="button">Editar</a>
 
     </section>
 </div>

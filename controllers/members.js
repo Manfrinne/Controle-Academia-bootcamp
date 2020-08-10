@@ -23,7 +23,7 @@ exports.show = function(req, res) {
 
   const member = {
       ...foundMember, // spread operator
-      age: age(foundMember.birth)
+      birth: date(foundMember.birth).birthDay
   }
 
   return res.render("members/show", {member})
@@ -47,25 +47,26 @@ exports.post = function(req, res) {
       }
   }
 
-  // Desestruturação de objetos
-  let { avatar_url, birth, name, services, gender } = req.body
+  // // Desestruturação de objetos
+  // let { avatar_url, birth, name, email, gender, blood, weight, height } = req.body
 
   // timestamp
   birth = Date.parse(req.body.birth)
-  const created_at = Date.now()
 
   // criar uma variável para identificar um objeto isoladamente
-  const id = Number(data.members.length + 1)
+  let id = 1
+  const lastMember = Number[data.members.length - 1]
+
+  if (lastMember) {
+    id = lastMember.id + 1
+  }
+
 
   // o método ".push" não deixa um novo objeto subscrever os objeto existente
   data.members.push({
-      id,
-      avatar_url,
-      name,
-      birth,
-      gender,
-      services,
-      created_at,
+    ...req.body,
+    id,
+    birth
   })
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err) {
@@ -94,7 +95,7 @@ exports.edit = function(req, res) {
 
   const member = {
     ...foundMember,
-    birth: date(foundMember.birth)
+    birth: date(foundMember.birth).iso
 }
 
   return res.render("members/edit", {member})

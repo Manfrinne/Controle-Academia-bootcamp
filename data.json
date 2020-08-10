@@ -1,10 +1,33 @@
 {
-  "members": [],
+  "members": [
+    {
+      "avatar_url": "https://www.google.com",
+      "name": "Member teste",
+      "email": "manfrinnesti@gmail",
+      "birth": 476064000000,
+      "gender": "F",
+      "blood": "AB+",
+      "weight": "145",
+      "height": "173",
+      "id": 1
+    },
+    {
+      "avatar_url": "https://www.google.com",
+      "name": "Member teste",
+      "email": "manfrinnesti@gmail.com",
+      "birth": -2932070400000,
+      "gender": "F",
+      "blood": "B1",
+      "weight": "183",
+      "height": "173",
+      "id": 1
+    }
+  ],
   "instructors": [
     {
       "id": 1,
       "avatar_url": "https://images.unsplash.com/photo-1595349393900-d34580c180af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      "name": "Geovane Carvalho ",
+      "name": "Geovane Carvalho Sousa Ferreira",
       "birth": 476236800000,
       "gender": "M",
       "services": "Crossfit, Academia",

@@ -49,7 +49,7 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 
 - Estruturando dados de membros;
 - Lógica do menu ativo;
-
+- Ajustando rotas e formulário de paresentação dos membros;
 
 ## Como contribuir:
 
@@ -57,8 +57,6 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 -  Crie uma nova branch, exemplo: `git checkout -b my-feature`;
 -  Commit as modificações, exemplo: `git commit -m 'feat: My new feature'`;
 -  Faça um push para a sua branch: `git push origin my-feature`;
-
--  Buscando instrutor com parâmetros da rota;
 
 
 

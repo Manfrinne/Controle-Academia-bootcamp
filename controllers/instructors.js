@@ -57,7 +57,7 @@ exports.post = function(req, res) {
   const created_at = Date.now()
 
   // criar uma variável para identificar um objeto isoladamente
-  const id = Number(data.instructors.length + 1)
+  const id = Number[data.instructors.length + 1]
 
   // o método ".push" não deixa um novo objeto subscrever os objeto existente
   data.instructors.push({
@@ -76,7 +76,7 @@ exports.post = function(req, res) {
       // motivo, o arquivo 'data.json' não puder ser criado
       if (err) {return res.send("Write file error!")}
 
-      return res.redirect(`instructors/${id}`)
+      return res.redirect(`../instructors`)
   })
 
   // return res.send(req.body)
@@ -96,7 +96,7 @@ exports.edit = function(req, res) {
 
   const instructor = {
     ...foundInstructor,
-    birth: date(foundInstructor.birth)
+    birth: date(foundInstructor.birth).iso
 }
 
   return res.render("instructors/edit", {instructor})
