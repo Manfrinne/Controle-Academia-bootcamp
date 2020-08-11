@@ -49,7 +49,8 @@ Desenvolver um Gerenciador de Academias. No projeto, vamos criar uma área de ca
 
 - Estruturando dados de membros;
 - Lógica do menu ativo;
-- Ajustando rotas e formulário de paresentação dos membros;
+- Ajustando rotas e formulário de apresentação dos membros;
+- Confirmação de Delete dos usuários;
 
 ## Como contribuir:
 

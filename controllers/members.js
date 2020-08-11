@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const {age, date} = require('../utils')
+const {date} = require('../utils')
 // {age} com as chaves é para
 // desestruturação do objeto
 
