@@ -147,7 +147,7 @@ header {
 
 /* FORM - create page  */
 
-input {
+input, select {
     width: 100%;
     outline: none;
     color: #555;

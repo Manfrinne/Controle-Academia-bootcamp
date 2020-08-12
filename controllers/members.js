@@ -55,12 +55,11 @@ exports.post = function(req, res) {
 
   // criar uma variável para identificar um objeto isoladamente
   let id = 1
-  const lastMember = Number[data.members.length - 1]
+  const lastMember = data.members[data.members.length - 1]
 
   if (lastMember) {
     id = lastMember.id + 1
   }
-
 
   // o método ".push" não deixa um novo objeto subscrever os objeto existente
   data.members.push({
