@@ -57,7 +57,7 @@ exports.post = function(req, res) {
   const created_at = Date.now()
 
   // criar uma variável para identificar um objeto isoladamente
-  const id = Number[data.instructors.length + 1]
+  const id = Number(data.instructors.length + 1)
 
   // o método ".push" não deixa um novo objeto subscrever os objeto existente
   data.instructors.push({
