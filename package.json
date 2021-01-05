@@ -13,8 +13,11 @@
     "nunjucks": "^3.2.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5"
+    "axios": ">=0.21.1",
+    "browser-sync": "^2.26.13",
+    "ini": "^2.0.0",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "object-path": ">=0.11.5"
   }
 }
